@@ -1,34 +1,32 @@
-# To Do List API
+# To Do List API - Node.js + Express
 
-API RESTful simples para gerenciamento de tarefas (To Do List), construída com Node.js e Express.
+API simples para gerenciamento de tarefas (To Do List) utilizando Node.js e Express, armazenando os dados em memória.
+
+---
 
 ## Funcionalidades
 
-- Criar nova tarefa  
 - Listar todas as tarefas  
-- Buscar tarefa por ID  
-- Atualizar tarefa  
-- Deletar tarefa  
+- Criar nova tarefa  
+- Atualizar tarefa parcialmente (título e status de conclusão)  
+- Deletar tarefa por ID  
 
-## Tecnologias
-
-- Node.js  
-- Express  
-- Body-parser (para lidar com JSON)  
-- (Opcional: banco de dados, ex: MongoDB, SQLite, ou armazenamento em memória)  
+---
 
 ## Endpoints
 
-| Método | Rota           | Descrição                | Parâmetros/Corpo                   |
-|--------|----------------|--------------------------|----------------------------------|
-| GET    | /tasks         | Lista todas as tarefas   | Nenhum                          |
-| GET    | /tasks/:id     | Busca tarefa por ID      | id: ID da tarefa (na URL)       |
-| POST   | /tasks         | Cria uma nova tarefa     | JSON: `{ "title": "tarefa", "completed": false }` |
-| PUT    | /tasks/:id     | Atualiza tarefa          | id: ID da tarefa (na URL) e JSON com dados para atualizar |
-| DELETE | /tasks/:id     | Deleta uma tarefa        | id: ID da tarefa (na URL)       |
+| Método  | Rota           | Descrição                      | Corpo (JSON) / Parâmetros                      |
+|---------|----------------|--------------------------------|-----------------------------------------------|
+| GET     | `/tarefas`     | Lista todas as tarefas          | -                                             |
+| POST    | `/tarefas`     | Cria uma nova tarefa            | `{ "titulo": "Nome da tarefa" }`              |
+| PATCH   | `/tarefas/:id` | Atualiza título e/ou conclusão  | `{ "titulo": "Novo título", "concluida": true/false }` (qualquer um pode ser omitido) |
+| DELETE  | `/tarefas/:id` | Deleta uma tarefa pelo ID       | `id` via URL                                  |
 
-## Como rodar localmente
+---
+
+## Como usar
 
 1. Clone o repositório:  
 ```bash
-git clone https://github.com/mariaegydio/todo-api.git
+git clone <url-do-repositorio>
+
