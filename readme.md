@@ -22,11 +22,4 @@ API simples para gerenciamento de tarefas (To Do List) utilizando Node.js e Expr
 | PATCH   | `/tarefas/:id` | Atualiza título e/ou conclusão  | `{ "titulo": "Novo título", "concluida": true/false }` (qualquer um pode ser omitido) |
 | DELETE  | `/tarefas/:id` | Deleta uma tarefa pelo ID       | `id` via URL                                  |
 
----
-
-## Como usar
-
-1. Clone o repositório:  
-```bash
-git clone <url-do-repositorio>
 
